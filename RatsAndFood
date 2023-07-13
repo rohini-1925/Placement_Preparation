@@ -1,0 +1,17 @@
+rat=int(input('rats : '))
+unit=int(input('unit : '))
+n=int(input('n : '))
+lst=[]
+flag=1
+need=unit*rat
+for i in range(n):
+    lst.append(int(input()))
+    if(sum(lst)>=need and flag):
+        count=i+1
+        flag=0
+if len(lst)<=0:
+    print('-1')
+if(sum(lst)>need):
+    print('food present in',count,'houses are sufficient ')
+elif(sum(lst)<need):
+    print('not sufficient')

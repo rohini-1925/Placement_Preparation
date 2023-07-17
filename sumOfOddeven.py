@@ -8,7 +8,7 @@ def sumOfMaximum(arr):
             odd.append(arr[i])
     even.sort()
     odd.sort()
-    return even[-2]+odd[-2]
+    return even[-2]+odd[1]
 n=int(input('Enter range : '))
 lst=[]
 for i in range(n):

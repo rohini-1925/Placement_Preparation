@@ -1,33 +1,94 @@
-What is an array?
+1) What is an array?
         An array is a collection of similar datatype elements that are stored in a contiguous memory location.
 
-What are the different types of arrays?
+2) What are the different types of arrays?
           *One dimensional array
           *Two dimensional array/ Multi-dimensional array
           *Three dimensional array/ Multi-dimensional array
 
-How do you declare array in different programming languages?
+3) How do you declare array in different programming languages?
     C , C++    :  data_type array_name[arra_size];
     C#, Java   :  data_type[] array_name = new data_type[array_size];
     Python     :  value=[value1,value2,..]  or value=[]
     PHP        :  $value = array(value1,value2,...)
 
-How do you access an element in the array?
+4) How do you access an element in the array?
       The elements can be accesses by specifying the name of the array and it's index value.
       If the index>=0 0r index<length(array) then it will return the element.
       Example:    array=[21,22,23,24,25]
                   print(array[2])
 
-How do you iterate through an array?
-      It can be done by using for loop, foreach loop and while loop.
+5) How do you iterate through an array?
+      It can be done by using for loop and while loop.
       forloop:        array=[21,22,23,24,25]
                       for i in array:
                         print(i)
                       
-      whileloop       i=0
+      whileloop:      i=0
                       while(i<len(array)):
                       print(array[i])
                       i += 1
+
+6) How do you find the sum of all elements in the array?
+                array=[2,5,7,4,1]
+                print(sum(array))
+        output : 19
+
+7) How do you find the average of all elements in the array?
+                array=[2,5,7,4,1]
+                print(sum(array)/len(array))
+        output: 3.8
+
+
+8) How do you find the maximum of all elements in the array?
+                array=[2,5,7,4,1]
+                print(max(array))
+        output: 7
+
+9) How do you find the manimum of all elements in the array?
+                array=[2,5,7,4,1]
+                print(min(array))
+        output: 1
+
+10) How do you check if an element exist in an array?
+                array=[2,5,7,4,1]
+                element=7
+                if element in array:
+                    print('present')
+                else: 
+                    print('absent')
+        output: present
+
+11) How do you sort an array?
+                array=[2,5,7,4,1]
+                print(sorted(array))
+        output: [1, 2, 4, 5, 7]
+
+12) How do you search an array for the given value?
+                array=[2,5,7,4,1]
+                element=7
+                if element in array:
+                    print('present')
+                else: 
+                    print('absent')
+        output: present
+
+13) How do you rotate an array?
+                array=[2,5,7,4,1]
+                rotate=2
+                print(array[2:]+array[:2])
+        output: [7, 4, 1, 2, 5]
+
+
+14) How do you reverse an array?
+                array=[2,5,7,4,1]
+                print(array[::-1])
+        output: [1, 4, 7, 5, 2]
+
+15) How do you remove duplicates from an array?
+                array=[8,2,5,7,4,1,4,2]
+                print(set(array))
+        output: {1, 2, 4, 5, 7, 8}
 
 
 

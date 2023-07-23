@@ -59,3 +59,80 @@ Arr: 9 8 –7 3 9 3
 Sample output:
 –21
 
+coding:
+******
+sum1=int(input())
+arr=list(map(int,input().split()))
+arr.sort()
+if len(arr)<2:
+    print('-1')
+elif sum(arr[-2:])<=sum1:
+    print(arr[-1]*arr[-2])
+else: 
+    print('0')
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+3)
+The given function has a string (str) and two characters, ch1 and ch2. Execute the function in such a way that str returns to its original string, and all the events in ch1 are replaced by ch2, and vice versa.
+Replacecharacter(Char str1, Char ch1, Int 1, Char ch2)
+
+Assumption
+This string has only alphabets that are in lower case.
+
+Example
+
+Input:
+str: apples
+ch1: a
+ch2: p
+
+Output:
+paales
+
+Explanation
+All the ‘a’ in the string is replaced with ‘p’. And all the ‘p’s are replaced with ‘a’.
+coding:
+******
+string1=str(input())
+char1=str(input())
+char2=str(input())
+string1=''.join(string1.replace(char1,'0'))
+string1=''.join(string1.replace(char2,char1))
+string1=''.join(string1.replace('0',char2))
+print(string1)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+4)
+Perform the function Int calculate(int m, int n). This function needs two positive integers. Calculate the sum of numbers between these two numbers that are divisible by 3 and 5.
+Assumption
+m > n > = 0
+
+Example
+
+Input:
+m: 12
+n: 50
+
+Output:
+90
+
+Explanation
+The numbers between 12 and 50 that are divisible by 3 and 5 are 15, 30, and 45. The sum of these numbers is 90.
+
+Sample input:
+m: 100
+n: 160
+
+Sample output:
+405
+
+coding:
+******
+start=int(input())
+end=int(input())
+sum1=0
+for i in range(start,end+1):
+    if i%3==0 and i%5==0:
+        sum1=sum1+i
+print(sum1)
+
+

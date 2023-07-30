@@ -1,0 +1,75 @@
+1)You are given two integer arrays nums1 and nums2, sorted in non-decreasing order,
+and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+coding:
+*******
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        for i in range(m,m+n):
+            nums1[i]=nums2[i-m]
+        nums1.sort()
+-----------------------------------------------------------------------------------------------------------------------------
+2) A phrase is a palindrome if, after converting all uppercase letters into lowercase 
+letters and removing all non-alphanumeric characters, it reads the same forward and backward. 
+Alphanumeric characters include letters and numbers.
+Given a string s, return true if it is a palindrome, or false otherwise.
+coding:
+******
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        string=[]
+        s=s.lower()
+        for i in s:
+            if (i>='0' and i<='9') or (i>='a' and i<="z"):
+                string.append(i)
+        print(string)
+        print(string[::-1])
+        if string==string[::-1]:    
+            return 1
+        else:
+            return 0
+            
+-------------------------------------------------------------------------------------------------------------------------------------
+3) Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or
+phrase, typically using all the original letters exactly once.
+
+coding:
+*******
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if(sorted(s)==sorted(t)):
+            return 1
+        else:
+            return 0
+
+------------------------------------------------------------------------------------------------------------------------------------
+4) Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string "".
+
+coding:
+*******
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        lst=[]
+        for i in range(len(strs)):
+            lst.append(len(strs[i]))
+        x=lst.index(min(lst))
+        string=strs[x]
+        res=''
+        for i in range(len(string)):
+            flag=True
+            for j in range(0,len(strs)):
+                if (strs[j][i]!=string[i]):
+                    flag=False
+            if flag==True:
+                res=res+''.join(string[i])
+            else:
+                break
+        return res
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+ 
+ 

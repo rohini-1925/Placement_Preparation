@@ -1,0 +1,133 @@
+1. Write a program to print "Hello, World!" in your preferred programming language.
+      
+      print("Hello World!")
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+2. Write a program to find the sum of two numbers.
+      a=int(input())
+      b=int(input())
+      print(a+b)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+3. Write a program to check if a number is even or odd.
+      a=int(input())
+      if a%2==0:
+          print('even')
+      else:
+          print('odd')
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+4. Write a program to calculate the factorial of a given number.
+      a=int(input())
+      tot=1
+      for i in range(1,a+1):
+          tot=tot*i
+      print(tot)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+5. Write a program to reverse a string.
+      s=input()
+      print(s[::-1])
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+6. Write a program to find the largest element in an array.
+      lst=list(map(int,input().split()))
+      print(max(lst))
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+7. Write a program to check if a string is a palindrome.
+      s=input()
+      st=''.join(reversed(s))
+      if s==st:
+          print('palindrome')
+      else:
+          print('not a palindrome')
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+8. Write a program to swap two variables without using a temporary variable.
+      x=int(input())
+      y=int(input())
+      x,y=y,x
+      print(x)
+      print(y)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+9. Write a program to calculate the area of a triangle.
+      b=int(input())
+      h=int(input())
+      print(b*h/2)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+10. Write a program to check if a year is a leap year.
+      y=int(input())
+      if y%4==0 and y%100!=0:
+          print('leapyear')
+      elif y%400==0:
+          print('leapyear')
+      else:
+          print('not a leapyear')
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+11. Write a program to find the second largest element in an array.
+      lst=list(map(int,input().split()))
+      x=max(lst)
+      lst.remove(x)
+      print(max(lst))
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+12.  Write a program to sort an array in ascending order using the bubble sort algorithm.
+      lst=list(map(int,input().split()))
+      for i in range(len(lst)):
+          for j in range(len(lst)-i-1):
+              if lst[j]>lst[j+1]:
+                  temp=lst[j]
+                  lst[j]=lst[j+1]
+                  lst[j+1]=temp
+      print(lst)
+      
+-----------------------------------------------------------------------------------------------------------------------------------------
+13. Write a program to reverse a linked list.
+      class Solution:
+          #Function to reverse a linked list.
+          def reverseList(self, head):
+              if head==None or head.next==None:
+                  return head
+              else:
+                  current=head
+                  prev=None
+                  nextnode=None
+                  while(current.next != None):
+                      nextnode=current.next
+                      current.next=prev
+                      prev=current
+                      current=nextnode
+                  current.next=prev
+              return current
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+14. Write a program to find the factorial of a number using recursion.
+      def fact(n):
+          if n==0 or n==1:
+              return 1
+          else:
+              return n*fact(n-1)
+      n1=int(input())
+      factorial=fact(n1)
+      print(factorial)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+15. Write a program to check if a given string is an anagram.
+      s1=input()
+      s2=input()
+      if (sorted(s1)==sorted(s2)):
+          print('anagram')
+      else:
+          print('not a anagram')
+
+
+
+
+
+
+
+
